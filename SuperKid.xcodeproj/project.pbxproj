@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		70A0308D1F5B8DE700F880D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A0308C1F5B8DE700F880D1 /* AppDelegate.swift */; };
-		70A0308F1F5B8DE700F880D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A0308E1F5B8DE700F880D1 /* ViewController.swift */; };
 		70A030921F5B8DE700F880D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A030901F5B8DE700F880D1 /* Main.storyboard */; };
 		70A030951F5B8DE700F880D1 /* SuperKid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70A030931F5B8DE700F880D1 /* SuperKid.xcdatamodeld */; };
 		70A030971F5B8DE700F880D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70A030961F5B8DE700F880D1 /* Assets.xcassets */; };
 		70A0309A1F5B8DE700F880D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A030981F5B8DE700F880D1 /* LaunchScreen.storyboard */; };
 		70A030A51F5B8DE800F880D1 /* SuperKidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A030A41F5B8DE800F880D1 /* SuperKidTests.swift */; };
 		70A030B01F5B8DE800F880D1 /* SuperKidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A030AF1F5B8DE800F880D1 /* SuperKidUITests.swift */; };
+		70A030BE1F5B8FC700F880D1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A030BD1F5B8FC700F880D1 /* LoginViewController.swift */; };
+		70A030C21F5BA74600F880D1 /* scoreboard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C11F5BA74600F880D1 /* scoreboard.ttf */; };
+		70A030C31F5BA74600F880D1 /* scoreboard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C11F5BA74600F880D1 /* scoreboard.ttf */; };
+		70A030C41F5BA74600F880D1 /* scoreboard.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C11F5BA74600F880D1 /* scoreboard.ttf */; };
+		70A030C61F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */; };
+		70A030C71F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */; };
+		70A030C81F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,6 @@
 /* Begin PBXFileReference section */
 		70A030891F5B8DE700F880D1 /* SuperKid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperKid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A0308C1F5B8DE700F880D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70A0308E1F5B8DE700F880D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70A030911F5B8DE700F880D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70A030941F5B8DE700F880D1 /* SuperKid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SuperKid.xcdatamodel; sourceTree = "<group>"; };
 		70A030961F5B8DE700F880D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,9 @@
 		70A030AB1F5B8DE800F880D1 /* SuperKidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperKidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70A030AF1F5B8DE800F880D1 /* SuperKidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperKidUITests.swift; sourceTree = "<group>"; };
 		70A030B11F5B8DE800F880D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70A030BD1F5B8FC700F880D1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		70A030C11F5BA74600F880D1 /* scoreboard.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoreboard.ttf; sourceTree = "<group>"; };
+		70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heroes Legend.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,14 @@
 		70A0308B1F5B8DE700F880D1 /* SuperKid */ = {
 			isa = PBXGroup;
 			children = (
+				70A030BD1F5B8FC700F880D1 /* LoginViewController.swift */,
 				70A0308C1F5B8DE700F880D1 /* AppDelegate.swift */,
-				70A0308E1F5B8DE700F880D1 /* ViewController.swift */,
 				70A030901F5B8DE700F880D1 /* Main.storyboard */,
 				70A030961F5B8DE700F880D1 /* Assets.xcassets */,
 				70A030981F5B8DE700F880D1 /* LaunchScreen.storyboard */,
 				70A0309B1F5B8DE700F880D1 /* Info.plist */,
 				70A030931F5B8DE700F880D1 /* SuperKid.xcdatamodeld */,
+				70A030C01F5BA70A00F880D1 /* Fonts */,
 			);
 			path = SuperKid;
 			sourceTree = "<group>";
@@ -126,6 +135,15 @@
 				70A030B11F5B8DE800F880D1 /* Info.plist */,
 			);
 			path = SuperKidUITests;
+			sourceTree = "<group>";
+		};
+		70A030C01F5BA70A00F880D1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */,
+				70A030C11F5BA74600F880D1 /* scoreboard.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +258,8 @@
 			files = (
 				70A0309A1F5B8DE700F880D1 /* LaunchScreen.storyboard in Resources */,
 				70A030971F5B8DE700F880D1 /* Assets.xcassets in Resources */,
+				70A030C21F5BA74600F880D1 /* scoreboard.ttf in Resources */,
+				70A030C61F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */,
 				70A030921F5B8DE700F880D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A030C71F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */,
+				70A030C31F5BA74600F880D1 /* scoreboard.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +277,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A030C81F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */,
+				70A030C41F5BA74600F880D1 /* scoreboard.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A0308F1F5B8DE700F880D1 /* ViewController.swift in Sources */,
+				70A030BE1F5B8FC700F880D1 /* LoginViewController.swift in Sources */,
 				70A0308D1F5B8DE700F880D1 /* AppDelegate.swift in Sources */,
 				70A030951F5B8DE700F880D1 /* SuperKid.xcdatamodeld in Sources */,
 			);

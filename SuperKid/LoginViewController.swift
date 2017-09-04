@@ -10,20 +10,29 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nickTextField: UITextField!
     @IBOutlet weak var appNameLabel: UIImageView!
     @IBOutlet weak var shieldLogo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Dismiss keyboard when touch outside textfield
+        self.hideKeyboard()
+        
+        //Scroll up view when editing with keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func notRegisteredButton(_ sender: Any) {
     }
     
     @IBAction func loginButton(_ sender: Any) {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,4 +51,38 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+extension UIViewController
+{
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height/3
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height/3
+            }
+        }
+    }
+    
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(UIViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 }

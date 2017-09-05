@@ -29,10 +29,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func notRegisteredButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "notRegisteredSegue", sender: self)
     }
     
     @IBAction func loginButton(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "loginToTaskListSegue", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

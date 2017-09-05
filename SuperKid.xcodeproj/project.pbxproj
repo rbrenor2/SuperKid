@@ -21,6 +21,11 @@
 		70A030C61F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */; };
 		70A030C71F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */; };
 		70A030C81F5BA9DA00F880D1 /* Heroes Legend.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */; };
+		70F780E91F5F48500005A666 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F780E81F5F48500005A666 /* RegisterViewController.swift */; };
+		70F780EB1F5F5BBB0005A666 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F780EA1F5F5BBB0005A666 /* TaskListViewController.swift */; };
+		70F780ED1F5F5ECE0005A666 /* ChooseCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F780EC1F5F5ECE0005A666 /* ChooseCharacterViewController.swift */; };
+		70F780F01F5F63970005A666 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F780EF1F5F63970005A666 /* ListTableViewCell.swift */; };
+		70F780F21F5F66210005A666 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F780F11F5F66210005A666 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		70A030BD1F5B8FC700F880D1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		70A030C11F5BA74600F880D1 /* scoreboard.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = scoreboard.ttf; sourceTree = "<group>"; };
 		70A030C51F5BA9DA00F880D1 /* Heroes Legend.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heroes Legend.ttf"; sourceTree = "<group>"; };
+		70F780E81F5F48500005A666 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		70F780EA1F5F5BBB0005A666 /* TaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		70F780EC1F5F5ECE0005A666 /* ChooseCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCharacterViewController.swift; sourceTree = "<group>"; };
+		70F780EF1F5F63970005A666 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		70F780F11F5F66210005A666 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +117,8 @@
 		70A0308B1F5B8DE700F880D1 /* SuperKid */ = {
 			isa = PBXGroup;
 			children = (
-				70A030BD1F5B8FC700F880D1 /* LoginViewController.swift */,
+				70F780EE1F5F63750005A666 /* Models */,
+				70F780E71F5F48280005A666 /* Controllers */,
 				70A0308C1F5B8DE700F880D1 /* AppDelegate.swift */,
 				70A030901F5B8DE700F880D1 /* Main.storyboard */,
 				70A030961F5B8DE700F880D1 /* Assets.xcassets */,
@@ -144,6 +155,26 @@
 				70A030C11F5BA74600F880D1 /* scoreboard.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		70F780E71F5F48280005A666 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				70A030BD1F5B8FC700F880D1 /* LoginViewController.swift */,
+				70F780E81F5F48500005A666 /* RegisterViewController.swift */,
+				70F780EA1F5F5BBB0005A666 /* TaskListViewController.swift */,
+				70F780EC1F5F5ECE0005A666 /* ChooseCharacterViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		70F780EE1F5F63750005A666 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70F780EF1F5F63970005A666 /* ListTableViewCell.swift */,
+				70F780F11F5F66210005A666 /* Task.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +320,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F780F21F5F66210005A666 /* Task.swift in Sources */,
+				70F780F01F5F63970005A666 /* ListTableViewCell.swift in Sources */,
 				70A030BE1F5B8FC700F880D1 /* LoginViewController.swift in Sources */,
 				70A0308D1F5B8DE700F880D1 /* AppDelegate.swift in Sources */,
 				70A030951F5B8DE700F880D1 /* SuperKid.xcdatamodeld in Sources */,
+				70F780ED1F5F5ECE0005A666 /* ChooseCharacterViewController.swift in Sources */,
+				70F780E91F5F48500005A666 /* RegisterViewController.swift in Sources */,
+				70F780EB1F5F5BBB0005A666 /* TaskListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +578,7 @@
 				70A030B61F5B8DE800F880D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70A030B71F5B8DE800F880D1 /* Build configuration list for PBXNativeTarget "SuperKidTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +587,7 @@
 				70A030B91F5B8DE800F880D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70A030BA1F5B8DE800F880D1 /* Build configuration list for PBXNativeTarget "SuperKidUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +596,7 @@
 				70A030BC1F5B8DE800F880D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

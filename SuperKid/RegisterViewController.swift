@@ -17,14 +17,9 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Dismiss keyboard when touch outside textfield
-        self.hideKeyboard()
-        
-        //Scroll up view when editing with keyboard
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        //
+        self.initialSetup()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func registerButton(_ sender: Any) {

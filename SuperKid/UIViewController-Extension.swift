@@ -11,6 +11,14 @@ import UIKit
 
 extension UIViewController
 {
+    func initialSetup(){
+        //Dismiss keyboard when touch outside textfield
+        self.hideKeyboard()
+        
+        //Scroll up view when editing with keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
     
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {

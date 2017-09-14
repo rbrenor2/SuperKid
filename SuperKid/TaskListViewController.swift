@@ -22,12 +22,8 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Dismiss keyboard when touch outside textfield
-        self.hideKeyboard()
-        
-        //Scroll up view when editing with keyboard
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        //
+        self.initialSetup()
 
         // Do any additional setup after loading the view.
         //Set datadource
@@ -37,6 +33,16 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         let task1 = Task(addedByUser: "testeUser", status: false, points: 100, description: "Arrumar a cama")
         self.ref.child(task1.taskDescription).setValue(task1.toAnyObject())
         
+        let task2 = Task(addedByUser: "testUser 2", status: false, points: 50, description: "Fazer a tarefa")
+        self.ref.child(task2.taskDescription).setValue(task2.toAnyObject())
+        
+        //
+        self.loadTasks()
+        
+        
+    }
+    
+    func loadTasks(){
         //
         ref.observe(.value, with: { snapshot in
             
@@ -51,7 +57,6 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
             self.tasksArray = newTasks
             self.taskListTableView.reloadData()
         })
-        
     }
     
     //TableView Delegates

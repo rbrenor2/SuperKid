@@ -157,18 +157,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+70" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sco-fQ-Kgy">
-                                                    <rect key="frame" x="227" y="7" width="90" height="110"/>
+                                                    <rect key="frame" x="214" y="7" width="84" height="110"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="4YU-OE-8Rl"/>
+                                                        <constraint firstAttribute="width" constant="84" id="4YU-OE-8Rl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ScoreBoard" family="Score Board" pointSize="39"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dud-Fk-9SB">
-                                                    <rect key="frame" x="8" y="44" width="224" height="37"/>
+                                                    <rect key="frame" x="30" y="44" width="176" height="37"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="224" id="e5D-o7-x1c"/>
+                                                        <constraint firstAttribute="width" constant="176" id="e5D-o7-x1c"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -178,8 +178,8 @@
                                             <constraints>
                                                 <constraint firstItem="dud-Fk-9SB" firstAttribute="top" secondItem="k02-1g-7Ia" secondAttribute="top" constant="44" id="6Fy-33-Wle"/>
                                                 <constraint firstAttribute="bottom" secondItem="sco-fQ-Kgy" secondAttribute="bottom" constant="13.5" id="Ixo-jl-sU2"/>
-                                                <constraint firstAttribute="trailing" secondItem="sco-fQ-Kgy" secondAttribute="trailing" constant="3" id="MQ1-4y-QL0"/>
-                                                <constraint firstItem="dud-Fk-9SB" firstAttribute="leading" secondItem="k02-1g-7Ia" secondAttribute="leading" constant="8" id="NOE-RB-76Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="sco-fQ-Kgy" secondAttribute="trailing" constant="22" id="MQ1-4y-QL0"/>
+                                                <constraint firstItem="dud-Fk-9SB" firstAttribute="leading" secondItem="k02-1g-7Ia" secondAttribute="leading" constant="30" id="NOE-RB-76Q"/>
                                                 <constraint firstItem="sco-fQ-Kgy" firstAttribute="top" secondItem="k02-1g-7Ia" secondAttribute="top" constant="7" id="VVY-Pa-TXo"/>
                                                 <constraint firstAttribute="bottom" secondItem="dud-Fk-9SB" secondAttribute="bottom" constant="49.5" id="WcA-ya-UZ6"/>
                                             </constraints>

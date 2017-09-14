@@ -149,24 +149,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="m2U-Ad-B7K" customClass="ListTableViewCell" customModule="SuperKid" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="131" id="m2U-Ad-B7K" customClass="TaskListCustomTableViewCell" customModule="SuperKid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m2U-Ad-B7K" id="k02-1g-7Ia">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="130.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+70" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sco-fQ-Kgy">
-                                                    <rect key="frame" x="219" y="15" width="90" height="94"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+70" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sco-fQ-Kgy">
+                                                    <rect key="frame" x="227" y="7" width="90" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="4YU-OE-8Rl"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="ScoreBoard" family="Score Board" pointSize="39"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dud-Fk-9SB">
+                                                    <rect key="frame" x="8" y="44" width="224" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="224" id="e5D-o7-x1c"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dud-Fk-9SB" firstAttribute="top" secondItem="k02-1g-7Ia" secondAttribute="top" constant="44" id="6Fy-33-Wle"/>
+                                                <constraint firstAttribute="bottom" secondItem="sco-fQ-Kgy" secondAttribute="bottom" constant="13.5" id="Ixo-jl-sU2"/>
+                                                <constraint firstAttribute="trailing" secondItem="sco-fQ-Kgy" secondAttribute="trailing" constant="3" id="MQ1-4y-QL0"/>
+                                                <constraint firstItem="dud-Fk-9SB" firstAttribute="leading" secondItem="k02-1g-7Ia" secondAttribute="leading" constant="8" id="NOE-RB-76Q"/>
+                                                <constraint firstItem="sco-fQ-Kgy" firstAttribute="top" secondItem="k02-1g-7Ia" secondAttribute="top" constant="7" id="VVY-Pa-TXo"/>
+                                                <constraint firstAttribute="bottom" secondItem="dud-Fk-9SB" secondAttribute="bottom" constant="49.5" id="WcA-ya-UZ6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="pointsLabel" destination="sco-fQ-Kgy" id="r2E-Gy-lTE"/>
+                                            <outlet property="taskDescriptionLabel" destination="dud-Fk-9SB" id="ebP-jA-vf4"/>
+                                            <outlet property="taskPointsLabel" destination="sco-fQ-Kgy" id="9qV-lm-F1e"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

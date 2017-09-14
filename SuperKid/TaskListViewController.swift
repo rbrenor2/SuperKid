@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class TaskListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var taskListTableView: UITableView!
     
-    let tasksArray:Array<Task> = []
-
+    //Connecting with Firebase
+    let ref = Database.database().reference(withPath:"Tasks")
+    
+    var tasksArray:Array<Task> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,19 +32,42 @@ class TaskListViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
         //Set datadource
         taskListTableView.dataSource = self
+
+        //TEST TASK UPLOAD
+        let task1 = Task(addedByUser: "testeUser", status: false, points: 100, description: "Arrumar a cama")
+        self.ref.child(task1.taskDescription).setValue(task1.toAnyObject())
+        
+        //
+        ref.observe(.value, with: { snapshot in
+            
+            var newTasks: [Task] = []
+            
+            for item in snapshot.children {
+                let task = Task(snapshot: item as! DataSnapshot)
+                newTasks.append(task)
+                print(newTasks)
+            }
+            
+            self.tasksArray = newTasks
+            self.taskListTableView.reloadData()
+        })
         
     }
     
     //TableView Delegates
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ListTableViewCell()
+
+        
+        
+        let cell = taskListTableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! TaskListCustomTableViewCell
+        
+        let currentTask:Task = tasksArray[indexPath.row]
+
+        cell.taskPointsLabel.text = String(currentTask.taskPoints)
+        
+        cell.taskDescriptionLabel.text = currentTask.taskDescription
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
